@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Dashboard</title>
+    <link href='css/bootstrap.css' rel="stylesheet"/>
+    <link href='css/app.css' rel="stylesheet"/>
+    <script src='vendors/jquery.js' type="text/javascript"></script>
+    <script src='vendors/bootstrap.js' type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <hr/>
+        <div class="span3"><h4>每月統計</h4><br/>
+            <span style="font-size:9pt;">移動滑鼠到不同按鈕上面，可以看不同的圖形</span>
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span2 offsethalf">
+                    <div class="btn-div">
+                        <a id="link-users" href="javascript:void(0);" class="btn-link active">8,429</a>
+                        <div class="btn-below">使用者</div>
+                    </div>
+                </div>
+                <div class="span2 offsethalf">
+                    <div class="btn-div">
+                        <a id="link-visits" href="javascript:void(0);" class="btn-link">188,022</a>
+                        <div class="btn-below">來客數</div>
+                    </div>
+                </div>
+                <div class="span2 offsethalf">
+                    <div class="btn-div">
+                        <a id="link-sales" href="javascript:void(0);" class="btn-link">$23,390</a>
+                        <div class="btn-below">銷售額</div>
+                    </div>
+                </div>
+            </div>
+            <div id="plotarea" style="width:600px;height:300px;"></div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <hr/>
+        <div class="span3"><h4>訪客分布</h4><br/>
+            <span style="font-size:9pt;">移動滑鼠圓餅圖上面，可以看個國家的百分比</span>
+        </div>
+        <div class="span9">
+            <div id="piearea" style="width:300px;height:200px;"></div>
+            <div id="hover" style="padding:20px 0 0 60px; visibility:hidden;"></div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <hr/>
+        <div class="span3"><h4>即時資訊</h4><br/>
+            <span style="font-size:9pt;">平均產生頁面數/ 每秒 / 每個伺服器.</span>
+        </div>
+        <div class="span9">
+            <div id="realtime" style="width:600px;height:300px;"></div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <script src="vendors/jquery.flot.js" type="text/javascript"></script>
+    <script src="vendors/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="js/DolphinFramework.js" type="text/javascript"></script>
+    <script src="js/DataSource/Coordinates.js" type="text/javascript"></script>
+    <script src="js/DataSource/MonthlyStatistics.js" type="text/javascript"></script>
+    <script src="js/Charts/LineChart.js" type="text/javascript"></script>
+    <script src="js/Charts/PieChart.js" type="text/javascript"></script>
+    <script src="js/Charts/RealtimeChart.js" type="text/javascript"></script>
+    <script src="js/Dashboard.js" type="text/javascript"></script>
+</div>
+</body>
+</html>

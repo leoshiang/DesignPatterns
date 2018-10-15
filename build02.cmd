@@ -1,0 +1,1 @@
+call webpack --config .\02.PublishSubscribe\src\MobileTracker\webpack.config.js
